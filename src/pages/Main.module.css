@@ -1,0 +1,96 @@
+.main {
+    position: relative;
+    background-color: black;
+}
+
+
+.main img {
+    display: block;
+    width: 100%;
+}
+  
+.main p {
+    position: absolute;
+    color: white;
+    box-sizing: border-box;
+    font-weight: 800;
+    text-align: right;
+} 
+
+.main p.greeting {
+  right: 10%;
+  top: 15%;
+  font-size: 45px;
+}
+   
+.main p.location {
+  right: 10%;
+  top: 45%;
+  font-size: 30px;
+  font-style: italic;
+} 
+.main button {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  top: 65%;
+  right: 5%;
+  color:white;
+  background-color: rgba(0, 0, 0, 0); 
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 10px 20px 10px 10px;
+  border : white 1px solid;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+} 
+.main button:hover {
+  color:black;
+  background-color: white; 
+  cursor :pointer;
+}
+
+.main img.fileIcon {
+  width: 32px;
+  padding-right:5px;
+}
+.main img.arrowIcon {
+  position: absolute;
+  width:60px;
+  color:white;
+  bottom: 30px;
+  left: 50%;
+  animation: move 1s infinite;
+}
+
+.animate_up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: up 1.5s ease-in-out forwards;
+}
+
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0); /* 시작 위치 */
+  }
+  50% {
+    transform: translateY(10px); /* 중간 위치 */
+  }
+  100% {
+    transform: translateY(0); /* 끝 위치 */
+  }
+}
