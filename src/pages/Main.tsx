@@ -1,13 +1,12 @@
 import styles from './Main.module.css';
-import bgImg from './../assets/image/bg3.jpg';
-import downloadIcon from './../assets/icon/pdf.png';
-import arrowDownIcon from './../assets/icon/arrowdown_white.png';
-import { useRef } from 'react';
+import { RefObject, useRef } from 'react';
+import { ReactComponent as fileIcon } from './../assets/icon/file-download.svg';
 
-const Main = () => {
+
+const Main = (props: {mainRef: RefObject<HTMLElement>, aboutRef: RefObject<HTMLElement>}) => {
 
     const aRef = useRef<HTMLAnchorElement>(null);
-    const path =  './../assets/file/resume.pdf'// Replace with the URL of the file to download
+    const path =  './../assets/file/resume.pdf'
     const handleDownload = async () => {
         try {
             const downloadResult = await fetch(path);
@@ -27,26 +26,25 @@ const Main = () => {
       
     };
 
-    // const onDownload = async () => {
-    //     const downloadResult = await fetch(path);
-    //     const blob = await downloadResult.blob();
-    //     saveAs(blob, "이력서_이성혁(Java_Backend).pdf");
-    //   };
-
+    const handleScrollDown = () => {
+      props.aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+    
 
     return (
-        <section className={styles.main}>
+        <section className={styles.main} ref={props.mainRef}>
             <div>
-                <p className={`${styles.greeting} ${styles.animate_up}`}>Hello, <br /> I'm Euna Kim.
-                < br/>A Full-Stack Web Developer</p>
+                <p className={`${styles.greeting} ${styles.animate_up}`}>
+                    Hello, <br /> 
+                    I'm Euna Kim. < br/>
+                    A Full-Stack Web Developer
+                </p>
                 <p className={`${styles.location} ${styles.animate_up}`}>Based in Sydney, Australia </p>
-
                 <a href={path} ref={aRef} download="resume.pdf" hidden/>
-                <button type="button" onClick={handleDownload}><img src={downloadIcon} className={styles.fileIcon}/><span>RESUME</span></button>
-                <img src={arrowDownIcon} className={styles.arrowIcon}/>
-                <img src={bgImg}/>
+                <button type="button" className={styles.downloadBtn} onClick={handleDownload} ><i className={styles.fileIcon} /><span>Download Resume</span></button>
+                <button type="button" onClick={handleScrollDown} ><i className={styles.arrowIcon}/></button>
+                <div className={styles.bgImg}/>
             </div>
-            
         </section>
     );
 }

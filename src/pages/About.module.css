@@ -1,0 +1,77 @@
+section.about { 
+  background-color: #DBDFEA;
+  color:#1572A1;
+}
+.about p {
+  font-family: Han Sans,sans-serif;
+}
+
+
+.about .title {
+  width: 280px;
+  text-align: center;
+  margin:0 auto;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  font-weight: 800;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.about .introduction{
+  display: flex;
+  line-height: 1.5;
+}
+.about .part1 {
+  flex:3;
+}
+
+.about .part1 .profile {
+  /* background-image: url('./../assets/image/profile.png'); */
+  background-image: url('./../assets/image/profile.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border-radius: 70%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.about .part2{
+  flex:7;
+  margin-left: 20px;
+}
+
+
+.about .introduction {
+  margin-top: 50px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.about .empasize {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+
+.contact{
+  margin: 50px auto;
+  text-align: center;
+}
+.contact .row{
+  display: flex;
+  margin-top: 30px;
+}
+
+
+.links {
+  text-align: center;
+}
+.links > a {
+  margin-left: 20px;
+}
+.links > a:hover svg {
+  transform: translateY(-5px);
+} 
+
