@@ -60,7 +60,7 @@ const Nav = (props : {refs: NavProps}) => {
     
     const {x, y} = useScroll();
     useEffect(() => {
-        console.log(y, position['aboutPosition'], position['skillsPosition'], selectedMenu)
+        // console.log(y, position['aboutPosition'], position['skillsPosition'], selectedMenu)
       
         // menu theme change
         y < position['modeChangePosition'] ? setIsDark(false) : setIsDark(true);
@@ -90,7 +90,8 @@ const Nav = (props : {refs: NavProps}) => {
        type RefType = { [key:string]: RefObject<HTMLElement> };
        const Ref: RefType = { 
                 'home'  : props.refs.mainRef, 
-                'about me':  props.refs.aboutRef
+                'about me':  props.refs.aboutRef,
+                'skills':  props.refs.skillsRef
             };
 
        Ref[value]?.current?.scrollIntoView({ behavior: 'smooth' });

@@ -31,13 +31,19 @@ const About =  (props: { aboutRef: React.RefObject<HTMLElement> }) => {
                     </div>
                     <div className={styles.part2}>
                         <p >
-                            With over <span className={styles.empasize}>5</span> years of experience as a <span className={styles.empasize}>full-stack web developer</span><br />
+                            A self-initiative <span className={styles.empasize}>full-stack web developer </span> 
+                            with <span className={styles.empasize}>5</span> years' experience of building web applications using multiple languages and databases<br />
                             Previous leader of a HTML community over <span className={styles.empasize}>10,000</span> members when I was just<span className={styles.empasize}> 14 </span> <br />
                             Strongly believe in the value of <span className={styles.empasize}>teamwork</span> and <span className={styles.empasize}>collaboration</span><br />
                             Love to push myself outside of my comfort zone and take on new <span className={styles.empasize}>challenges</span> <br />
                             Have a strong sense of <span className={styles.empasize}>responsibility</span><br />
                             Priority tasks effectively and strive to meet the deadlines no matter what<br />
-                            <span style={{fontSize:'13px', paddingTop:'20px'}}>#responsible #socializing #organizing #hard-worker</span>
+                            {/* With over <span className={styles.empasize}>5</span> years of experience as a <span className={styles.empasize}>full-stack web developer</span><br />
+                            Previous leader of a HTML community over <span className={styles.empasize}>10,000</span> members when I was just<span className={styles.empasize}> 14 </span> <br />
+                            Strongly believe in the value of <span className={styles.empasize}>teamwork</span> and <span className={styles.empasize}>collaboration</span><br />
+                            Love to push myself outside of my comfort zone and take on new <span className={styles.empasize}>challenges</span> <br />
+                            Have a strong sense of <span className={styles.empasize}>responsibility</span><br />
+                            Priority tasks effectively and strive to meet the deadlines no matter what<br /> */}
                         </p> 
                     </div>
                 </div>

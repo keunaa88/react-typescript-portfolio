@@ -1,6 +1,71 @@
 
 
+/* front */
+.html { background-image: url('./../assets/icon/skills/html.png'); }
+.javascript { background-image: url('./../assets/icon/skills/javascript.png'); }
+.css { background-image: url('./../assets/icon/skills/css.png'); }
+.react  { background-image: url('./../assets/icon/skills/react2.png'); }
+.jquery { background-image: url('./../assets/icon/skills/jquery.png'); }
+.angular { background-image: url('./../assets/icon/skills/angular.png'); }
+.typescript { background-image: url('./../assets/icon/skills/typescript3.jpg'); }
+
+/* back */
+.node { background-image: url('./../assets/icon/skills/nodejs.png'); }
+.java { background-image: url('./../assets/icon/skills/java.png'); }
+.spring { background-image: url('./../assets/icon/skills/spring2.png'); }
+.c { background-image: url('./../assets/icon/skills/c.png'); }
+.net { background-image: url('./../assets/icon/skills/net.jpg'); }
+
+/* database */
+.oracle { background-image: url('./../assets/icon/skills/oracle2.png'); width: 100px; height: 50px;}
+.postgresql { background-image: url('./../assets/icon/skills/postgresql.png'); width: 200px; height: 50px;}
+.mongo { background-image: url('./../assets/icon/skills/mongo.png'); width: 150px; height: 50px;}
+.mssql { background-image: url('./../assets/icon/skills/mssql.jpg'); width: 80px; height: 60px;}
+.aws { background-image: url('./../assets/icon/skills/aws.png'); width: 80px; height: 60px;}
+.git { background-image: url('./../assets/icon/skills/git.jpg'); width: 100px; height: 60px;}
+.gitlab { background-image: url('./../assets/icon/skills/gitlab.jpg'); width: 100px; height: 60px;}
+
 .skills {
-    height: 1000px;
     background-color: #F6F1F1;
+}
+
+.languages {
+    display: flex;
+    flex-direction: row;
+}
+
+.languages > div  {
+    flex: 1; 
+    height: fit-content;
+    text-align: center;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 20px 20px; 
+    box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2); 
+}
+ 
+.languages > div p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+} 
+
+.box {
+    display: flex;
+    padding: 0 20px 20px 20px;
+    flex-wrap: wrap;
+}
+
+.box div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px 0;
+    /* box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2); */
+    /* border-radius: 20px 20px; */
+}
+
+.front .box div,
+.back .box div{
+    width: 80px; 
+    height: 80px;
 }
