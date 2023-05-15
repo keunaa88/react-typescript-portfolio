@@ -2,9 +2,6 @@ section.about {
   background-color: #DBDFEA;
   color:#1572A1;
 }
-.about p {
-  font-family: Han Sans,sans-serif;
-}
 
 
 .about .title {
@@ -70,8 +67,10 @@ section.about {
 }
 .links > a {
   margin-left: 20px;
+ 
 }
 .links > a:hover svg {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
+  transition: 0.3s;
+  transform: scale(1.2);
 } 
-

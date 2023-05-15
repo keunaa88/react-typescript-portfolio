@@ -9,7 +9,7 @@ const Skills = (props: { skillsRef: React.RefObject<HTMLElement> }) => {
                 <div className="title"><p>SKILLS</p></div>
                 <div className={styles.languages}>
                     <div className={styles.front}>
-                        <p>Front-end</p>
+                        <p>Front-End</p>
                         <div className={styles.box}>
                             <div className={styles.html}></div>
                             <div className={styles.javascript}></div>
@@ -21,7 +21,7 @@ const Skills = (props: { skillsRef: React.RefObject<HTMLElement> }) => {
                         </div>
                     </div>
                     <div className={styles.back}>
-                        <p>Back-end</p>
+                        <p>Back-End</p>
                         <div className={styles.box}>
                             <div className={styles.node}></div>
                             <div className={styles.java}></div>
@@ -30,11 +30,11 @@ const Skills = (props: { skillsRef: React.RefObject<HTMLElement> }) => {
                             <div className={styles.net}></div>
                         </div>
                     </div>
-                    <div className={styles.cloud}>
+                    <div className={styles.others}>
                         <p>Others</p>
                         <div className={styles.box}>
                             <div className={styles.oracle} ></div>
-                            <div className={styles.postgresql}></div>
+                            <div className={styles.postgre}></div>
                             <div className={styles.mongo}></div>
                             <div className={styles.mssql}></div>
                             <div className={styles.git}></div>

@@ -1,0 +1,38 @@
+.career {
+    color:white;
+    background-color: #163352;
+}
+
+.career .box {
+    margin-top: 50px;
+    padding: 50px 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.detail {
+    color: #163352;
+}
+.detail .header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 50px;
+    font-size: 14px;
+}
+.detail .header .info > div:first-child{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.detail .content > div {
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+}

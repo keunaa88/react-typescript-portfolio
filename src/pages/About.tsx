@@ -8,7 +8,6 @@ import { ReactComponent as EduIcon } from './../assets/icon/education.svg';
 import { ReactComponent as Instagram } from './../assets/icon/instagram.svg';
 import { ReactComponent as LinkedIn } from './../assets/icon/linkedIn.svg';
 import { ReactComponent as Github } from './../assets/icon/github.svg';
-import Icon from './../components/Icon';
 
 import Introduction from './../components/Introduction';
 import React from 'react';
@@ -21,6 +20,7 @@ const About =  (props: { aboutRef: React.RefObject<HTMLElement> }) => {
         instagram: 'https://www.instagram.com/___kimuna/'
     }
 
+    const education = 'Diploma in Software development <br/> Bachelor in Information & Telecommunication <br />';
     return (
         <section className={styles.about} ref={props.aboutRef}>
             <div className="content">
@@ -51,12 +51,12 @@ const About =  (props: { aboutRef: React.RefObject<HTMLElement> }) => {
                     <div className={styles.row}>
                         <Introduction text='Euna Kim' icon={<PersonIcon width={35} height={35}/>}/>
                         <Introduction text='Sydney, NSW' icon={<GeoIcon width={30} height={30}/>}/>
-                        <Introduction text='Work Permission' text2='Available Immediately' icon={<DocumentIcon width={30} height={30} fill={'#1572A1'}/>}/>
+                        <Introduction style='sml' text='Work Permission </br> No restrictions' icon={<DocumentIcon width={30} height={30} fill={'#1572A1'}/>}/>
                     </div>
                     <div className={styles.row}>
                         <Introduction text='keunaa88@gmail.com' icon={<EmailIcon width={30} height={30}/>} link='mailto:keunaa88@gmail.com'/>
                         <Introduction text='0482 835 873' icon={<PhoneIcon width={30} height={30}/>} link='tel:0482835873'/>
-                        <Introduction text='Diploma in Software development' text2='Bachelor in Information & Telecommunication' icon={<EduIcon width={30} height={30}/>}/>
+                        <Introduction style='sml' isButton={true} text={education} icon={<EduIcon width={30} height={30}/>}/>
                     </div>
                 </div>
                 <div className={styles.links}>

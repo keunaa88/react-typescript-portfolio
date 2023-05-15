@@ -1,10 +1,12 @@
+import styles from './Projects.module.css';
 
-const Projects = () => {
+const Projects = (props: { projectsRef: React.RefObject<HTMLElement> }) => {
 
     return (
-        <div>
-            Projects 
-        </div>
+        <section className={styles.projects} ref={props.projectsRef}>
+            <div className="content">
+            </div>
+        </section>
     )
 
 }

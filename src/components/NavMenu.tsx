@@ -3,10 +3,11 @@ import styles from './NavMenu.module.css';
 interface propsType {
     menu: string,
     selectedMenu: string,
-    onClick: React.MouseEventHandler<HTMLAnchorElement>;
+    onClick: () => void;
 }
 
 const NavMenu = (props: propsType) => {
+    console.log(props.menu, props.selectedMenu)
     return (
         <li>
             <a 

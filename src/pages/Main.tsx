@@ -42,7 +42,7 @@ const Main = (props: {mainRef: RefObject<HTMLElement>, aboutRef: RefObject<HTMLE
                 <p className={`${styles.location} ${styles.animate_up}`}>Based in Sydney, Australia </p>
                 <a href={path} ref={aRef} download="resume.pdf" hidden/>
                 <button type="button" className={styles.downloadBtn} onClick={handleDownload} ><i className={styles.fileIcon} /><span>Download Resume</span></button>
-                <button type="button" onClick={handleScrollDown} ><i className={styles.arrowIcon}/></button>
+                <div onClick={handleScrollDown} ><i className={styles.arrowIcon}/></div>
                 <div className={styles.bgImg}/>
             </div>
         </section>

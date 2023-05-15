@@ -1,12 +1,28 @@
 
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+ 
+  
 .title {
-    text-align: center;
-    margin:50px auto;
+    text-align: center; 
+    font-family: 'Abril Fatface', cursive;
 }
 .title p {
     display: inline;
     border-bottom-width: 1px;
-    border-bottom-style: solid;
-    font-size: 3rem;
-    font-weight: 800;
+    border-bottom-style: solid; 
+    padding-bottom: 5px;
+    font-size: 3.5rem;
+    font-weight: 500;
 }
+
+.sml {
+    font-size: 12px;
+}
+.bold {
+    font-weight: 600;
+}
+

@@ -7,6 +7,8 @@ type NavProps = {
     mainRef: React.RefObject<HTMLElement>;
     aboutRef: React.RefObject<HTMLElement>;
     skillsRef: React.RefObject<HTMLElement>;
+    careerRef: React.RefObject<HTMLElement>;
+    projectsRef: React.RefObject<HTMLElement>;
   };
 
 const useScroll = () => {
@@ -21,7 +23,6 @@ const useScroll = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
     
-    //document.querySelector(".menu").offsetHeight;
     return state;
 }
 
@@ -31,73 +32,47 @@ const Nav = (props : {refs: NavProps}) => {
     const [selectedMenu, setSelectedMenu] = useState('home');
     const position = {
         modeChangePosition : 500,
-        aboutPosition: props.refs.aboutRef.current? props.refs.aboutRef.current.offsetTop  : 0,
-        skillsPosition : props.refs.skillsRef.current? props.refs.skillsRef.current.offsetTop : 0,
+        aboutPosition: props.refs.aboutRef.current? props.refs.aboutRef.current.offsetTop - 5  : 0,
+        skillsPosition : props.refs.skillsRef.current? props.refs.skillsRef.current.offsetTop - 5 : 0,
+        careerPosition : props.refs.careerRef.current? props.refs.careerRef.current.offsetTop - 5 : 0,
+        projectsPosition : props.refs.projectsRef.current? props.refs.projectsRef.current.offsetTop - 5 : 0,
     }
-    // useEffect(()=>{
-    //     const threshold = 500; // the point 
-    //     console.log('ref', props.refs.aboutRef.current?.scrollTo)
-    //     window.addEventListener('scroll', () => {
-    //             if (window.scrollY > threshold) {
-    //                 setIsDark(true);
-    //             } else {
-    //                 setIsDark(false);
-    //             }
-    //        // }
-    //     });
-    // });
-    // const changeSelectedMenu = (y: number) => {
-    //     if(y > position['modeChangePosition']){
-    //         setIsDark(true);
-    //     } else {
-    //         setIsDark(false);
-    //     }
-    // }
-    const changeSelectedMenu = (menu:string) => {
-        console.log(menu)
-        setSelectedMenu(menu);
-    }
-    
+
     const {x, y} = useScroll();
     useEffect(() => {
-        // console.log(y, position['aboutPosition'], position['skillsPosition'], selectedMenu)
       
         // menu theme change
         y < position['modeChangePosition'] ? setIsDark(false) : setIsDark(true);
 
         // selected menu change
-        if(y < position['aboutPosition']) {
+        if(y <= position['aboutPosition']) {
             setSelectedMenu('home');
         } else if ( y >= position['aboutPosition'] && y < position['skillsPosition']) {
             setSelectedMenu('about me');
-        } else if ( y >= position['skillsPosition'] && y < 5000) {
-            //todo
+        } else if ( y >= position['skillsPosition'] && y < position['careerPosition']) {
             setSelectedMenu('skills');
+        } else if ( y >= position['careerPosition'] && y < position['projectsPosition']) {
+            setSelectedMenu('career');
+        } else {
+            setSelectedMenu('projects');
         }
     }, [y]);
 
-    // const handleScroll = () => {
-    //     console.log('selected', selectedMenu, window.pageYOffset)
-    // }
-
-    // useEffect(() => {
-    //     window.onscroll = () => handleScroll();
-    // }, [selectedMenu]); // IMPORTANT, This will cause react to update depending on change of this value
 
 
     const handleClick = (value: string) => {
-        
        type RefType = { [key:string]: RefObject<HTMLElement> };
        const Ref: RefType = { 
                 'home'  : props.refs.mainRef, 
                 'about me':  props.refs.aboutRef,
-                'skills':  props.refs.skillsRef
+                'skills':  props.refs.skillsRef,
+                'career':  props.refs.careerRef,
+                'projects':  props.refs.projectsRef
             };
 
        Ref[value]?.current?.scrollIntoView({ behavior: 'smooth' });
        setSelectedMenu(value);
     }
-
 
     return (
         <section className={`${styles.header} ${isDark ? styles.dark : ''}`}>
